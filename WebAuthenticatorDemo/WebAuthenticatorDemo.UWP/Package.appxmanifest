@@ -43,9 +43,7 @@
 
       <Extensions>
         <uap:Extension Category="windows.protocol">
-          <uap:Protocol Name="io.identitymodel.native">
-            <uap:DisplayName>WebAuthenticatorDemo</uap:DisplayName>
-          </uap:Protocol>
+          <uap:Protocol Name="gogate.intouch.com"/>
         </uap:Extension>
       </Extensions>
       

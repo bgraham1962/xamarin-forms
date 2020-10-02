@@ -2,13 +2,13 @@
 {
     public static class Constants
     {
-        public static string AuthorityUri = "https://demo.identityserver.io";
-        public static string AuthorizeUri = "https://demo.identityserver.io/connect/authorize";
-        public static string TokenUri = "https://demo.identityserver.io/connect/token";
-        public static string RedirectUri = "io.identitymodel.native://callback";
-        public static string ApiUri = "https://demo.identityserver.io/api/";
-        public static string ClientId = "native.hybrid";
-        public static string ClientSecret = "xoxo";
-        public static string Scope = "openid profile api";
+        public static string AuthorityUri = "https://localhost:44318";
+        public static string AuthorizeUri = "https://localhost:44318/connect/authorize";
+        public static string TokenUri = "https://localhost:44318/connect/token";
+        public static string RedirectUri = "gogate.intouch.com://auth";
+        public static string ApiUri = "http://localhost:5678/";
+        public static string ClientId = "gogate";
+        public static string ClientSecret = null;
+        public static string Scope = "idapi";
     }
 }

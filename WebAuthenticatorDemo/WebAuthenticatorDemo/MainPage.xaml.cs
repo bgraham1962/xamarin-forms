@@ -23,14 +23,22 @@ namespace WebAuthenticatorDemo
 
         async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            string url = identityService.CreateAuthorizationRequest();
-            WebAuthenticatorResult authResult = await WebAuthenticator.AuthenticateAsync(new Uri(url), new Uri(Constants.RedirectUri));
-
-            string raw = ParseAuthenticatorResult(authResult);
-            authorizeResponse = new AuthorizeResponse(raw);
-            if (authorizeResponse.IsError)
+            try
             {
-                Console.WriteLine("ERROR: {0}", authorizeResponse.Error);
+                string url = identityService.CreateAuthorizationRequest();
+                WebAuthenticatorResult authResult = await WebAuthenticator.AuthenticateAsync(new Uri(url), new Uri(Constants.RedirectUri));
+
+                string raw = ParseAuthenticatorResult(authResult);
+                authorizeResponse = new AuthorizeResponse(raw);
+                if (authorizeResponse.IsError)
+                {
+                    Console.WriteLine("ERROR: {0}", authorizeResponse.Error);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
             }
         }
 
