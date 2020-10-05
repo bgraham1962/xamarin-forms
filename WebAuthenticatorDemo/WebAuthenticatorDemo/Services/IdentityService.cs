@@ -28,8 +28,8 @@ namespace WebAuthenticatorDemo.Services
             // Dictionary with values for the authorize request
             var dic = new Dictionary<string, string>();
             dic.Add("client_id", Constants.ClientId);
-            dic.Add("client_secret", Constants.ClientSecret);
-            dic.Add("response_type", "code id_token");
+            //dic.Add("client_secret", Constants.ClientSecret);
+            dic.Add("response_type", "code");
             dic.Add("scope", Constants.Scope);
             dic.Add("redirect_uri", Constants.RedirectUri);
             dic.Add("nonce", Guid.NewGuid().ToString("N"));

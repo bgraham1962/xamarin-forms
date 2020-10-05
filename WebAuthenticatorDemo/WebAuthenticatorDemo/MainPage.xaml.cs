@@ -38,7 +38,6 @@ namespace WebAuthenticatorDemo
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                throw;
             }
         }
 
